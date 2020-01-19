@@ -4,10 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { CounterComponent } from './components/counter/counter.component';
+import { ColorComponent } from './components/color/color.component';
+import { DuckgooseComponent } from './components/duckgoose/duckgoose.component';
+import { ServiceExampleComponent } from './components/service-example/service-example.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CounterComponent,
+    ColorComponent,
+    DuckgooseComponent,
+    ServiceExampleComponent,
   ],
   imports: [
     BrowserModule,
