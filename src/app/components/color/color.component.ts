@@ -6,10 +6,10 @@ import { Component } from "@angular/core";
   styleUrls: ["./color.component.scss"]
 })
 export class ColorComponent {
-  light: boolean = false;
+  colour: boolean = false;
   constructor() {}
 
   toggleLightOn() {
-    this.light = !this.light;
+    this.colour = !this.colour;
   }
 }

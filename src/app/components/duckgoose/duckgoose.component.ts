@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { duck, goose } from "./duckgoose";
+import { MyServiceService } from '../../services/my-service.service'
 
 @Component({
   selector: "app-duckgoose",
@@ -7,7 +8,17 @@ import { duck, goose } from "./duckgoose";
   styleUrls: ["./duckgoose.component.scss"]
 })
 export class DuckgooseComponent implements OnInit {
-  constructor() {}
+  ducks = duck
+  constructor(private myService: MyServiceService ) {}
+  words: any 
+  ngOnInit() {
+    this.myService.getHello().subscribe(val => this.words = val)
+  }
 
-  ngOnInit() {}
+  getGoose() {
+    this.ducks = goose
+  }
+  
+  
+
 }

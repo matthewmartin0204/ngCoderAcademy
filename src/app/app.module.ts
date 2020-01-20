@@ -8,6 +8,7 @@ import { CounterComponent } from './components/counter/counter.component';
 import { ColorComponent } from './components/color/color.component';
 import { DuckgooseComponent } from './components/duckgoose/duckgoose.component';
 import { ServiceExampleComponent } from './components/service-example/service-example.component';
+import { MyServiceService } from './services/my-service.service'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { ServiceExampleComponent } from './components/service-example/service-ex
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [MyServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
